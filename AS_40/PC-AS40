@@ -1,1 +1,4 @@
 # Configuração de interface e IP
+
+ip 200.40.0.2/24 200.40.0.1
+save configuracao.vpc
