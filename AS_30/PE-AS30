@@ -1,0 +1,20 @@
+# Configuração de interface e IP
+
+hostname PE-AS30
+!
+int lo0
+ip add 1.1.30.1 255.255.255.255
+no shut
+!
+int ethernet0/0
+ip add 10.0.13.2 255.255.255.252
+no shut
+!
+int ethernet 0/1
+ip add 10.0.34.1 255.255.255.252
+no shut
+!
+int ethernet 0/2
+ip add 200.30.0.1 255.255.255.252
+no shut
+!

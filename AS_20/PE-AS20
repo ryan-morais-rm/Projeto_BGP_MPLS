@@ -1,0 +1,23 @@
+# Configuração de interface e IP
+
+hostname PE-AS20
+!
+int lo0
+ip add 1.1.20.1 255.255.255.255
+no shut
+!
+int ethernet0/0
+ip add 10.0.12.2 255.255.255.252
+no shut
+!
+int ethernet 0/1
+ip add 10.0.24.1 255.255.255.252
+no shut
+!
+int ethernet 0/2
+ip add 10.0.24.5 255.255.255.252
+no shut
+!
+int ethernet 0/3
+ip add 200.20.0.1 255.255.255.252
+no shut

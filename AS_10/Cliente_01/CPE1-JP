@@ -1,0 +1,25 @@
+# Configuração de interface e IP
+
+hostname CPE1-JP
+!
+int lo0
+ip add 1.1.10.4 255.255.255.255
+no shut
+!
+int ethernet0/0
+no shut
+!
+int ethernet0/0.101
+encapsulation dot1Q 101
+ip add 10.64.9.2 255.255.255.252
+no shut
+!
+int ethernet0/0.10
+encapsulation dot1Q 10
+ip add 200.10.0.2 255.255.255.0
+no shut
+!
+int ethernet0/1
+ip add 192.168.0.1 255.255.255.0
+no shut
+!

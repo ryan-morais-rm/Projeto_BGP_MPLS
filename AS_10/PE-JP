@@ -1,0 +1,28 @@
+# Configuração de interface e IP
+
+hostname PE-JP
+!
+int lo0
+ip add 1.1.10.2 255.255.255.255
+no shut
+!
+int ethernet0/0
+ip add 10.64.10.2 255.255.255.252
+no shut
+!
+int ethernet 0/1
+ip add 10.64.12.2 255.255.255.252
+no shut
+!
+int ethernet 0/2
+no shut
+!
+int ethernet0/2.101
+encapsulation dot1Q 101
+ip add 10.64.9.1 255.255.255.252
+no shut
+!
+int ethernet0/2.10
+encapsulation dot1Q 10
+ip add 200.10.0.1 255.255.255.0
+no shut

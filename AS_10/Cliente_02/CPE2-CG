@@ -1,0 +1,20 @@
+# Configuração de interface e IP
+
+hostname CPE2-CG
+!
+int lo0
+ip add 1.1.10.6 255.255.255.255
+no shut
+!
+int ethernet0/0
+no shut
+!
+int Ethernet0/0.10
+encapsulation dot1Q 10
+ip add 200.10.1.2 255.255.255.0
+no shut
+!
+int ethernet0/1
+ip add 192.168.0.1 255.255.255.0
+no shut
+!
