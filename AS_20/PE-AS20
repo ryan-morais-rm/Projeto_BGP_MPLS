@@ -21,3 +21,20 @@ no shut
 int ethernet 0/3
 ip add 200.20.0.1 255.255.255.252
 no shut
+
+
+# Configuração do Peering BGP AS 20
+en 
+conf t
+ip route 1.1.40.1 255.255.255.255 ethernet 0/1
+ip route 1.1.40.1 255.255.255.255 ethernet 0/2
+router bgp 20
+neighbor 10.0.24.2 remote-as 40
+neighbor 10.0.24.2 update-source Loopback0
+neighbor 10.0.24.2 ttl-security hops 2
+neighbor 10.0.24.6 remote-as 40
+neighbor 10.0.24.6 update-source Loopback0
+neighbor 10.0.24.6 ttl-security hops 2
+neighbor 10.0.13.2 remote-as 30
+neighbor 10.0.34.1 remote-as 30
+neighbor 10.0.12.1 remote-as 10

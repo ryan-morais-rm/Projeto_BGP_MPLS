@@ -21,3 +21,13 @@ no shut
 int ethernet 0/3
 ip add 10.0.13.1 255.255.255.252
 no shut
+
+
+# Configuração do Peering BGP
+en 
+conf t
+router bgp 10
+neighbor 10.0.12.2 255.255.255.252 remote-as 20
+neighbor 10.0.13.2 255.255.255.252 remote-as 30
+neighbor 1.1.40.1 255.255.255.255 remote-as 40
+
